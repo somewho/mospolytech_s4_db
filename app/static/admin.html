@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FilmDB Admin</title>
+  <link rel="stylesheet" href="/static/css/admin.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo-icon">🎬</span>
+        <span class="logo-text">FilmDB</span>
+      </div>
+      <nav id="sidebar-nav">
+        <div class="nav-loading">Загрузка...</div>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div id="main">
+      <!-- Topbar -->
+      <header id="topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle" class="icon-btn" title="Меню">☰</button>
+          <nav class="breadcrumb" id="breadcrumb"></nav>
+        </div>
+        <div class="topbar-right">
+          <a href="/" class="btn btn-ghost btn-sm">← На сайт</a>
+          <a href="/api/docs" target="_blank" class="btn btn-ghost btn-sm">API Docs</a>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <main id="content">
+        <div class="welcome">
+          <h1>FilmDB Admin</h1>
+          <p>Выберите таблицу в боковом меню для начала работы.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- Confirm modal -->
+  <div id="confirm-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3 id="confirm-title">Подтверждение</h3>
+      <p id="confirm-text"></p>
+      <div class="modal-actions">
+        <button id="confirm-ok" class="btn btn-danger">Удалить</button>
+        <button id="confirm-cancel" class="btn btn-ghost">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>
